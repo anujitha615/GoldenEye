@@ -29,3 +29,32 @@
 ```bash
 sudo apt update
 sudo apt install -y tcpdump jq iproute2 iptables procps hping3 curl apache2-utils inotify-tools
+```
+Python & Scapy
+```
+pip install scapy --break-system-packages
+```
+Clone Repository
+````bash
+git clone https://github.com/yourusername/GoldenEye.git
+cd GoldenEye
+chmod +x GoldenEye.py
+````
+##🚀 Usage
+Attack Mode
+```bash
+sudo python3 GoldenEye.py attack <target> -a <attack_type> [-p port] [-c count] [-t threads]
+````
+
+Detection Mode
+```bash
+sudo python3 GoldenEye.py detect -i eth0 --threshold-syn 100 --threshold-udp 200
+````
+For advanced system monitoring (Bash version):
+
+```bash
+sudo ./GoldenEye.sh detect -i eth0 --monitor-processes --monitor-connections
+````
+Report Generation
+````bash
+python3 GoldenEye.py report
